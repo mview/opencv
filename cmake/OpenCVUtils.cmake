@@ -493,6 +493,11 @@ macro(CHECK_MODULE module_name define)
 endmacro()
 
 
+macro(ocv_check_modules_android module_name)
+    set(FFMPEG_${module_name}_FOUND 1)
+    set(FFMPEG_${module_name}_VERSION ${FFMPEG_VERSION})
+endmacro()
+
 set(OPENCV_BUILD_INFO_FILE "${CMAKE_BINARY_DIR}/version_string.tmp")
 file(REMOVE "${OPENCV_BUILD_INFO_FILE}")
 function(ocv_output_status msg)
